@@ -1,2 +1,2 @@
 #!/bin/bash
-python -m SimpleHTTPServer 56666
+cd static && python -m SimpleHTTPServer 56666
