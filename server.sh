@@ -1,2 +1,2 @@
 #!/bin/bash
-cd ~/ && python -m SimpleHTTPServer 56666
+python -m SimpleHTTPServer 56666
