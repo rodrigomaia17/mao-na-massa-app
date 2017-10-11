@@ -1,0 +1,20 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Copy service file
+      copy: 
+        src: rmaia.service
+        dest: /etc/systemd/system/rmaia.service
+
+    - name: Clone repo
+      git:
+        repo: 'https://github.com/rodrigomaia17/mao-na-massa-app.git'
+        dest: /home/rmaia/app 
+
+    - name: Restart service
+      service:
+        name: rmaia.service
+        daemon_reload: yes
+        state: reloaded

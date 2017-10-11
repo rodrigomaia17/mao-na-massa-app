@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=simple
 User=rmaia
-WorkingDirectory=/home/rmaia
-ExecStart=/home/rmaia/server.sh
+WorkingDirectory=/home/rmaia/app
+ExecStart=/home/rmaia/app/server.sh
 Restart=on-abort
 
 [Install]
